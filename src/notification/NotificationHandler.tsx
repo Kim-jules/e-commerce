@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { messaging, getToken, onMessage } from "../firebase";
+import { messaging, getToken, onMessage } from "../lib/firebase";
 
 const NotificationsHandler = () => {
   useEffect(() => {
