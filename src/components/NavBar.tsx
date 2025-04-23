@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import { HiOutlineUserCircle, HiOutlineShoppingCart, HiSearch } from "react-icons/hi2";
+import { HiOutlineUserCircle, HiOutlineShoppingCart } from "react-icons/hi2";
+import { HiSearch } from "react-icons/hi";
 import Link from "next/link";
 
 import {
@@ -35,7 +36,9 @@ const NavBar = () => {
           </div>
           <div className="buttons flex items-center space-x-6">
             <div className="search">
-
+            <button className="py-2 rounded text-3xl">
+                  <HiSearch className="inline-block" />
+                </button>
             </div>
             <div className="shopping-cart">
               <Link href="/cart" className="hover:text-gray-400">
