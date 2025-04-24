@@ -11,6 +11,8 @@
   "dependencies": {
     "@clerk/nextjs": "^6.12.12",
     "algoliasearch": "^5.23.2",
+    "axios": "^1.8.4",
+    "dotenv": "^16.5.0",
     "firebase": "^11.5.0",
     "firebase-admin": "^13.2.0",
     "next": "15.2.4",
