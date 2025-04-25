@@ -2,14 +2,14 @@ import { initializeApp } from 'firebase/app';
 import { getMessaging, getToken, onMessage } from 'firebase/messaging';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyD2FNomjNJct4U-iGWOgtrUOx70ortHhsE",
-    authDomain: "e-commerce-project-689e1.firebaseapp.com",
-    projectId: "e-commerce-project-689e1",
-    storageBucket: 'e-commerce-project-689e1',
-    messagingSenderId: "1064156092747",
-    appId: "1:1064156092747:web:84455b701b8adbe7c7b0ce",
-    measurementId: "G-JRJTK1LPR3"
-};
+    apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+    authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+    databaseURL: process.env.NEXT_PUBLIC_FIREBASE_DATABASE_URL,
+    projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+    storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+    appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+  };
   
 const app = initializeApp(firebaseConfig);
 const messaging = getMessaging(app);
