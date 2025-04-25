@@ -3,6 +3,7 @@ import { Quicksand, Anton } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
 import CartProvider from "@/context/useCart";
+import { DataProvider } from "@/context/DataContext";
 
 const quickSand = Quicksand({
   subsets: ["latin"],
@@ -11,16 +12,10 @@ const quickSand = Quicksand({
 });
 
 const anton = Anton({
-  subsets: ['latin'],
+  subsets: ["latin"],
   weight: ["400"],
   display: "swap",
-})
-
-// const boldonse = Boldonse({
-//   subsets: ['latin'],
-//   weight: ["400"],
-//   display: "swap",
-// })
+});
 
 export const metadata: Metadata = {
   title: "Quino",
@@ -35,12 +30,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${quickSand.className} antialiased`}>
-        <CartProvider>
-          <NavBar />
-          <main className="px-20 py-5 bg-slate-200 content flex-grow min-h-screen">
-            {children}
-          </main>
-        </CartProvider>
+        <DataProvider>
+          <CartProvider>
+            <NavBar />
+            <main className="bg-slate-200 content flex-grow min-h-screen">
+              {children}
+            </main>
+          </CartProvider>
+        </DataProvider>
       </body>
     </html>
   );
