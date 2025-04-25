@@ -39,7 +39,7 @@ const NavBar = () => {
         <nav className="flex justify-between items-center p-4 px-20 bg-white">
           {/* Logo Section */}
           <div className="flex items-center">
-            <Image src="/logo.png" alt="Logo" width={50} height={50} />
+            <Image src="/next.svg" alt="Logo" width={50} height={50} />
             <h1 className="ml-2 text-3xl font-bold">Quino</h1>
           </div>
 
