@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Quicksand, Anton } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
+import Footer from "@/components/Footer";
 import CartProvider from "@/context/useCart";
 import { DataProvider } from "@/context/DataContext";
 
@@ -36,6 +37,7 @@ export default function RootLayout({
             <main className="bg-slate-200 content flex-grow min-h-screen">
               {children}
             </main>
+            <Footer/>
           </CartProvider>
         </DataProvider>
       </body>
