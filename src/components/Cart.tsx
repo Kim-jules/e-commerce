@@ -17,10 +17,14 @@ const Cart: React.FC = () => {
 
   return (
     <div className="relative z-50">
-      <div className="icon text-2xl bg-gray-100 p-4 w-14 h-14 flex items-center justify-center rounded-2xl cursor-pointer">
-        <button onClick={() => setShowCart(!showCart)}>
+      {/* Cart Icon */}
+      <div className="icon text-2xl p-3 sm:p-4 w-12 sm:w-14 h-12 sm:h-14 bg-black flex items-center justify-center rounded-2xl cursor-pointer">
+        <button
+          onClick={() => setShowCart(!showCart)}
+          className="text-white relative"
+        >
           {cart.length > 0 && (
-            <span className="absolute top-1 right-1 text-xs bg-red-500 text-white rounded-full w-4 h-4 flex items-center justify-center">
+            <span className="absolute -top-2 -right-2 text-xs bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-[10px]">
               {cart.length}
             </span>
           )}
@@ -28,9 +32,10 @@ const Cart: React.FC = () => {
         </button>
       </div>
 
+      {/* Cart Panel */}
       {showCart && (
-        <div className="absolute right-0 top-16 w-96 bg-white p-4 rounded-2xl shadow-2xl transition-all duration-300 max-h-[90vh] overflow-y-auto">
-          <h2 className="font-bold text-lg mb-3">Shopping Cart</h2>
+        <div className="absolute right-0 top-16 w-full sm:w-[28rem] bg-white p-4 sm:p-6 rounded-2xl shadow-2xl transition-all duration-300 max-h-[90vh] overflow-y-auto">
+          <h2 className="font-bold text-lg sm:text-xl mb-3">Shopping Cart</h2>
 
           {cart.length === 0 ? (
             <p className="text-sm text-gray-500">Your cart is empty</p>
@@ -39,32 +44,32 @@ const Cart: React.FC = () => {
               {cart.slice(0, 10).map((product) => (
                 <li
                   key={product.productId}
-                  className="flex justify-between gap-4 items-center hover:bg-gray-100 p-3 rounded-xl"
+                  className="flex justify-between gap-3 sm:gap-4 items-center hover:bg-gray-100 p-2 sm:p-3 rounded-xl"
                 >
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-2 sm:gap-3 flex-1">
                     <img
                       src={product.images[0]}
                       alt={product.name}
-                      className="w-12 h-12 object-cover rounded-lg"
+                      className="w-12 h-12 sm:w-14 sm:h-14 object-cover rounded-lg"
                     />
-                    <div className="flex flex-col text-sm">
+                    <div className="flex flex-col text-sm w-full">
                       <span className="font-semibold line-clamp-1">
                         {product.name}
                       </span>
-                      <span className="text-blue-500 text-xs">
+                      <span className="text-blue-500 text-xs sm:text-sm">
                         RWF {product.price}
                       </span>
                       <div className="flex items-center gap-1 mt-1">
                         <button
                           onClick={() => decreaseQuantity(product.productId)}
-                          className="px-2 bg-gray-200 rounded hover:bg-gray-300"
+                          className="px-2 bg-gray-200 rounded hover:bg-gray-300 text-sm"
                         >
                           <HiMinusSm />
                         </button>
-                        <span className="mx-2">{product.quantity}</span>
+                        <span className="mx-2 text-sm">{product.quantity}</span>
                         <button
                           onClick={() => increaseQuantity(product.productId)}
-                          className="px-2 bg-gray-200 rounded hover:bg-gray-300"
+                          className="px-2 bg-gray-200 rounded hover:bg-gray-300 text-sm"
                         >
                           <HiPlusSm />
                         </button>

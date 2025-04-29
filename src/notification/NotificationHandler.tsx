@@ -1,25 +1,26 @@
-import { useEffect } from "react";
-import { messaging, getToken, onMessage } from "../lib/firebase";
+// import { useEffect, useState } from "react";
+// import { messaging, getToken, onMessage } from "../lib/firebase";
 
-const NotificationsHandler = () => {
-  useEffect(() => {
-    async function requestPermission() {
-      try {
-        const permission = await Notification.requestPermission();
-        if (permission == "granted") {
-          console.log("Notification Permission Granted.");
+// const NotificationsHandler = () => {
+//   const [token, setToken] = useState<string>('');
 
-          const swRegistration = await navigator.serviceWorker.register(
-            "/firebase-messaging-sw.js"
-          );
+//   useEffect(() => {
+//     async function requestPermission() {
+//       try {
+//         const permission = await Notification.requestPermission();
+//         if (permission == "granted") {
+//           console.log("Notification Permission Granted.");
 
-          const currentToken = await getToken(messaging, {
-            vapidKey:
-              "BBfUEaaJti9pn4T8UENLwqdC-8Bo6WziLsDnA-b74fGElIv0mioGCE_NMoO38CzQ27VcnGSnsC2tP-TBTF9_500",
-            serviceWorkerRegistration: swRegistration,
-          });
-        }
-      } catch (error) {}
-    }
-  });
-};
+//           const swRegistration = await navigator.serviceWorker.register(
+//             "/firebase-messaging-sw.js"
+//           );
+
+//           messaging.then((msg) => {
+//             if (!msg) return;
+
+//           })
+//         }
+//       } catch (error) {}
+//     }
+//   });
+// };

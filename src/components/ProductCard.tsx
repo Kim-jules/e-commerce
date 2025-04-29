@@ -4,6 +4,7 @@ import React from "react";
 import { HiShoppingCart, HiStar } from "react-icons/hi";
 import Image from "next/image";
 import { useCart } from "@/context/useCart";
+import { JetBrains_Mono } from "next/font/google";
 
 export interface Product {
   productId: string;
@@ -27,6 +28,12 @@ export interface Product {
   updatedAt: string;
 }
 
+const jetBrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["400"],
+  display: "swap",
+});
+
 interface ProductProps {
   id: string;
   data: Product;
@@ -43,12 +50,14 @@ const ProductTile: React.FC<ProductProps> = ({ data }) => {
     <div className="cursor-pointer select-none hover:transition-all hover:z-10 ease-in-out duration-100">
       <ul>
         <li>
-          <section className="bg-white p-4 rounded-3xl shadow-2xl h-full flex flex-col gap-4">
+          <section className="bg-white p-4 shadow-2xl h-full flex flex-col gap-4">
             <div className="w-full h-72">
               <Image
                 src={data.images[0]}
                 alt={data.name}
-                className="w-full h-full object-cover rounded-xl"
+                width={500}
+                height={500}
+                className="w-full h-full object-cover"
               />
             </div>
 
@@ -75,12 +84,15 @@ const ProductTile: React.FC<ProductProps> = ({ data }) => {
                   </span>
                 </div>
 
-                <div className="text-blue-600 font-semibold">
+                <div
+                  className={`${jetBrainsMono.className} text-blue-600 font-semibold`}
+                >
                   {data.discountPrice ? (
                     <>
                       <span className="line-through text-gray-500 mr-2">
                         RWF {data.price.toFixed(2)}
                       </span>
+                      <span className="text-black">|</span>
                       <span className="text-lg">
                         RWF {data.discountPrice.toFixed(2)}
                       </span>
@@ -93,7 +105,7 @@ const ProductTile: React.FC<ProductProps> = ({ data }) => {
 
               <button
                 onClick={() => handleClick(data)}
-                className="text-white bg-blue-600 p-3 rounded-xl flex items-center justify-center hover:bg-blue-700"
+                className="text-white bg-black p-3 rounded-xl flex items-center justify-center hover:bg-blue-700 transition-all duration-200 ease-in-out"
               >
                 <HiShoppingCart className="text-xl" />
               </button>

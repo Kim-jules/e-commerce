@@ -30,14 +30,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${quickSand.className} antialiased`}>
+      <body className={`${quickSand.className} antialiased bg-gray-200`}>
         <DataProvider>
           <CartProvider>
             <NavBar />
-            <main className="bg-slate-200 content flex-grow min-h-screen">
-              {children}
-            </main>
-            <Footer/>
+            <main className="content flex-grow min-h-screen">{children}</main>
+            <Footer />
           </CartProvider>
         </DataProvider>
       </body>

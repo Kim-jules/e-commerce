@@ -14,10 +14,10 @@
 //                         <li>Designs clothes</li>
 //                         <li>Good pants</li>
 //                         <li>Made in rwanda clothes</li>
-                        
+
 //                     </ul>
 //                    </div>
-                  
+
 //                    <div>
 //                    <h3 className="font font-semibold mb-2">Drip with us</h3>
 //                    <ul className="space-y-1">
@@ -29,8 +29,8 @@
 //                         <li>Made in rwanda clothes</li>
 //                         <li>this is our fresh fashion </li>
 //                         <li>good and reliable products</li>
-                        
-//                     </ul> 
+
+//                     </ul>
 //                    </div>
 //                 </div>
 //                 <div>
@@ -44,7 +44,7 @@
 //                         <li>Made in rwanda clothes</li>
 //                         <li>we are here for you</li>
 //                         <li>we pick only the best</li>
-                        
+
 //                     </ul>
 //                 </div>
 //                 <div>
@@ -68,72 +68,64 @@
 import React from "react";
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
+  const footerLinks = [
+    {
+      title: "Shop",
+      links: ["Home", "Men's Fashion", "Women's Fashion", "Accessories"],
+    },
+    {
+      title: "Useful Links",
+      links: ["Blog", "Cart", "Orders"],
+    },
+    {
+      title: "Customer Service",
+      links: ["Contact Us", "Help Center", "Return Policy", "Shipping Info"],
+    },
+    {
+      title: "About Us",
+      links: ["About Quino", "Careers", "Privacy Policy", "Terms & Conditions"],
+    },
+  ];
+
   return (
-    <footer className="bg-white mt-10 rounded-t-3xl shadow-lg">
+    <footer className="bg-white mt-10 shadow-lg">
       <div className="max-w-7xl mx-auto px-6 py-12">
+        {/* Main Sections */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 text-sm text-gray-700">
-          {/* Section 1 */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-gray-900">Get to Know Us</h3>
-            <ul className="space-y-2">
-              <li className="hover:underline">Careers</li>
-              <li className="hover:underline">Blog</li>
-              <li className="hover:underline">Fashion</li>
-              <li className="hover:underline">Designs Clothes</li>
-              <li className="hover:underline">Good Pants</li>
-              <li className="hover:underline">Made in Rwanda Clothes</li>
-            </ul>
-          </div>
-
-          {/* Section 2 */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-gray-900">Drip With Us</h3>
-            <ul className="space-y-2">
-              <li className="hover:underline">Careers</li>
-              <li className="hover:underline">Blog</li>
-              <li className="hover:underline">Fashion</li>
-              <li className="hover:underline">Designs Clothes</li>
-              <li className="hover:underline">Good Pants</li>
-              <li className="hover:underline">Made in Rwanda Clothes</li>
-              <li className="hover:underline">This is Our Fresh Fashion</li>
-              <li className="hover:underline">Good and Reliable Products</li>
-            </ul>
-          </div>
-
-          {/* Section 3 */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-gray-900">Let Us Help You</h3>
-            <ul className="space-y-2">
-              <li className="hover:underline">Careers</li>
-              <li className="hover:underline">Blog</li>
-              <li className="hover:underline">Fashion</li>
-              <li className="hover:underline">Designs Clothes</li>
-              <li className="hover:underline">Good Pants</li>
-              <li className="hover:underline">Made in Rwanda Clothes</li>
-              <li className="hover:underline">We Are Here for You</li>
-              <li className="hover:underline">We Pick Only the Best</li>
-            </ul>
-          </div>
-
-          {/* Section 4 */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-gray-900">Payment Options</h3>
-            <ul className="space-y-2">
-              <li className="hover:underline">Business Card</li>
-              <li className="hover:underline">Shop with Points</li>
-              <li className="hover:underline">Reload Your Balance</li>
-              <li className="hover:underline">Currency Converter</li>
-            </ul>
-          </div>
+          {footerLinks.map((section, index) => (
+            <div key={index}>
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">
+                {section.title}
+              </h3>
+              <ul className="space-y-2">
+                {section.links.map((link, idx) => (
+                  <li
+                    key={idx}
+                    className="hover:underline hover:text-black transition-colors cursor-pointer"
+                  >
+                    {link}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
 
-        {/* Bottom Footer */}
-        <div className="mt-12 border-t border-gray-200 pt-6 text-center text-xs text-gray-700">
-          <p>© {new Date().getFullYear()} Quino. All rights reserved.</p>
-          <div className="flex justify-center gap-4 mt-2">
-            <a href="#" className="hover:underline">Privacy</a>
-            <a href="#" className="hover:underline">Terms</a>
-            <a href="#" className="hover:underline">Support</a>
+        {/* Bottom Section */}
+        <div className="mt-12 border-t border-gray-200 pt-6 flex flex-col md:flex-row justify-between items-center text-xs text-gray-700 gap-4">
+          <p>© {currentYear} Quino. All rights reserved.</p>
+          <div className="flex gap-4">
+            <a href="#" className="hover:underline hover:text-black">
+              Privacy
+            </a>
+            <a href="#" className="hover:underline hover:text-black">
+              Terms
+            </a>
+            <a href="#" className="hover:underline hover:text-black">
+              Support
+            </a>
           </div>
         </div>
       </div>
@@ -142,5 +134,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
-
