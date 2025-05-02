@@ -18,13 +18,13 @@ const Cart: React.FC = () => {
   return (
     <div className="relative z-50">
       {/* Cart Icon */}
-      <div className="icon text-2xl p-3 sm:p-4 w-12 sm:w-14 h-12 sm:h-14 bg-black flex items-center justify-center rounded-2xl cursor-pointer">
+      <div className="icon text-2xl  flex items-center justify-center rounded-2xl cursor-pointer">
         <button
           onClick={() => setShowCart(!showCart)}
-          className="text-white relative"
+          className="text-white relative p-3 sm:p-4 w-12 sm:w-14 h-12 sm:h-14 bg-black rounded-2xl cursor-pointer"
         >
           {cart.length > 0 && (
-            <span className="absolute -top-2 -right-2 text-xs bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-[10px]">
+            <span className="absolute -top-2 -right-2 text-md bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-[10px]">
               {cart.length}
             </span>
           )}
@@ -34,17 +34,17 @@ const Cart: React.FC = () => {
 
       {/* Cart Panel */}
       {showCart && (
-        <div className="absolute right-0 top-16 w-full sm:w-[28rem] bg-white p-4 sm:p-6 rounded-2xl shadow-2xl transition-all duration-300 max-h-[90vh] overflow-y-auto">
+        <div className="absolute right-0 top-16 w-full sm:w-[28rem] bg-gray-100  p-4 sm:p-6 rounded-2xl shadow-2xl transition-all duration-300 max-h-[90vh] overflow-y-auto">
           <h2 className="font-bold text-lg sm:text-xl mb-3">Shopping Cart</h2>
 
           {cart.length === 0 ? (
             <p className="text-sm text-gray-500">Your cart is empty</p>
           ) : (
-            <ul className="flex flex-col gap-4">
-              {cart.slice(0, 10).map((product) => (
+            <ul className="flex flex-col gap-3">
+              {cart.slice(0, 5).map((product) => (
                 <li
                   key={product.productId}
-                  className="flex justify-between gap-3 sm:gap-4 items-center hover:bg-gray-100 p-2 sm:p-3 rounded-xl"
+                  className="flex justify-between gap-3 sm:gap-4 items-center hover:bg-gray-200 bg-white p-2 sm:p-3 rounded-xl"
                 >
                   <div className="flex items-center gap-2 sm:gap-3 flex-1">
                     <img
@@ -87,15 +87,16 @@ const Cart: React.FC = () => {
             </ul>
           )}
 
-          {cart.length > 10 && (
-            <div className="mt-4 text-center">
-              <Link
-                href="/cart"
-                className="text-blue-600 hover:underline text-sm font-medium"
-              >
+          {cart.length > 5 && (
+            <Link
+              href="/cart"
+              className="hover:underline text-sm font-medium"
+              onClick={() => setShowCart(false)}
+            >
+              <div className="mt-4 text-center bg-black text-white p-2 rounded-xl">
                 View all products
-              </Link>
-            </div>
+              </div>
+            </Link>
           )}
         </div>
       )}

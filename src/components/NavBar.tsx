@@ -74,7 +74,7 @@ const NavBar = () => {
         <nav
           className={`fixed top-0 left-0 w-full flex justify-between items-center px-6 sm:px-10 md:px-20 py-4 transition-all duration-300 ${
             scrolled ? "bg-white shadow-md" : "bg-black/10 backdrop-blur-3xl"
-          } z-50`}
+          } ${isMenuOpen ? "z-10" : "z-50"}`}
         >
           {/* Left: Hamburger + Logo (Logo centers at md+) */}
           <div className="flex items-center gap-6 sm:gap-4">
