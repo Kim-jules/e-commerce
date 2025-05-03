@@ -69,7 +69,7 @@ const TrustedBrands = () => {
       >
         {brands.map((brand, index) => (
           <SwiperSlide key={index}>
-            <div className="flex items-center justify-center h-20">
+            <div className="flex items-center justify-center h-20 py-4">
               <Image
                 src={brand.logo}
                 alt={brand.name}
