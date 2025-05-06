@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@clerk/nextjs": "^6.12.12",
-    "algoliasearch": "^5.23.2",
+    "algoliasearch": "^5.24.0",
     "axios": "^1.8.4",
     "dotenv": "^16.5.0",
     "firebase": "^11.5.0",
@@ -19,6 +19,7 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",
+    "react-instantsearch": "^7.15.6",
     "swiper": "^11.2.6"
   },
   "devDependencies": {

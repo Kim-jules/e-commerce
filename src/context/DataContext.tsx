@@ -30,6 +30,11 @@ export const DataProvider = ({ children }: { children: React.ReactNode }) => {
           ...doc.data(),
         }));
         setData(productsData);
+
+        // Triggering Algolia sync via API
+        await fetch("/api/algolia_index_sync", {
+          method: "POST",
+        });
       } catch (err: any) {
         console.error("Firestore fetch failed:", err);
         setError(err.message);

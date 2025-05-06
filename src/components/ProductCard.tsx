@@ -63,10 +63,10 @@ const ProductTile: React.FC<ProductProps> = ({ data }) => {
                 />
               </div>
 
-              <div className="flex justify-between items-start">
+              <div className="flex justify-between items-start gap-3">
                 <div className="flex flex-col gap-2 w-full">
                   <h1 className="font-bold text-xl">{data.name}</h1>
-                  <p className="text-gray-500 text-sm line-clamp-2">
+                  <p className="text-gray-500 text-sm line-clamp-1">
                     {data.description}
                   </p>
 
