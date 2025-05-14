@@ -9,6 +9,7 @@ import {
   HiXMark,
   HiHome,
   HiSquare3Stack3D,
+  HiOutlineShoppingBag,
 } from "react-icons/hi2";
 import { TbShoe } from "react-icons/tb";
 import {
@@ -51,6 +52,11 @@ const navLinks = [
     name: "Orders",
     href: "/orders",
     icon: HiSquare3Stack3D,
+  },
+  {
+    name: "Cart",
+    href: "/cart",
+    icon: HiOutlineShoppingBag,
   },
 ];
 
@@ -151,23 +157,24 @@ const NavBar = () => {
             isMenuOpen ? "translate-x-0" : "-translate-x-200"
           }`}
         >
-          <div className="m-5 p-3 flex w-32 rounded-xl items-center gap-4 hover:cursor-pointer hover:bg-black hover:text-white bg-gray-100 transition-all duration-300">
-            <button onClick={toggleMenu} className="text-xl">
+          <div className="m-5 p-3 w-fit font-semibold flex rounded-xl items-center hover:cursor-pointer hover:bg-black hover:text-white bg-gray-100 transition-all duration-300">
+            <button onClick={toggleMenu} className="flex items-center gap-3">
               <HiXMark />
             </button>
-            <div className={`${jetBrainsMono.className}`}>Close</div>
           </div>
-          <div className="p-6 flex flex-col space-y-2 font-semibold">
+          <div className="p-6 flex flex-col space-y-2">
             {navLinks.map(({ name, href, icon: Icon }) => (
               <Link
                 key={name}
                 href={href}
                 onClick={toggleMenu}
-                className="hover:bg-black hover:text-white p-4 rounded-lg flex items-center bg-gray-100 transition-all duration-300"
+                className="hover:bg-black hover:text-white p-4 text-sm rounded-lg flex items-center bg-gray-100 transition-all duration-300"
               >
-                <button className="flex items-center text-lg sm:text-xl">
+                <button
+                  className={`flex items-center text-sm lg:text-sm gap-4`}
+                >
                   <Icon />
-                  <span className="ml-2">{name}</span>
+                  <span className="">{name}</span>
                 </button>
               </Link>
             ))}

@@ -11,10 +11,12 @@
   "dependencies": {
     "@clerk/nextjs": "^6.12.12",
     "algoliasearch": "^5.24.0",
-    "axios": "^1.8.4",
+    "axios": "^1.9.0",
     "dotenv": "^16.5.0",
     "firebase": "^11.5.0",
     "firebase-admin": "^13.2.0",
+    "form-data": "^4.0.2",
+    "fs": "^0.0.1-security",
     "next": "15.2.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

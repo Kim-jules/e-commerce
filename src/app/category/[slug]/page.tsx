@@ -29,14 +29,14 @@ interface CategoryPageProps {
   };
 }
 
-const CategoryPage = ({ params }: CategoryPageProps) => {
+const CategoryPage = async ({ params }: CategoryPageProps) => {
   const { slug } = params;
 
   // Optional: Validate route
   if (!validCategories.includes(slug)) return notFound();
 
   return (
-    <div className="p-10 mt-24">
+    <div className="p-10 px-30 mt-24">
       <h1 className={`text-4xl font-bold capitalize ${anton.className}`}>
         {slug.replace("-", " ")}
       </h1>

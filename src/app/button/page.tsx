@@ -1,6 +1,7 @@
 "use client";
 export default function SeedButton() {
   const seed = async () => {
+    console.log("Clicked");
     const res = await fetch("/api/seed_products", { method: "POST" });
     const data = await res.json();
     alert(data.message || data.error);

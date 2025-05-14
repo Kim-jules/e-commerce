@@ -26,15 +26,15 @@ export const DataProvider = ({ children }: { children: React.ReactNode }) => {
       try {
         const querySnapshot = await getDocs(collection(db, "products"));
         const productsData = querySnapshot.docs.map((doc) => ({
-          id: doc.id,
+          productId: doc.id,
           ...doc.data(),
         }));
         setData(productsData);
 
         // Triggering Algolia sync via API
-        await fetch("/api/algolia_index_sync", {
-          method: "POST",
-        });
+        // await fetch("/api/algolia_index_sync", {
+        //   method: "POST",
+        // });
       } catch (err: any) {
         console.error("Firestore fetch failed:", err);
         setError(err.message);
