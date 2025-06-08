@@ -1,41 +1,49 @@
 "use client";
 
 import React, { createContext, useContext, useEffect, useState } from "react";
-import { database } from "@/lib/firebase";
-import { ref, onValue } from "firebase/database";
+import { db } from "@/lib/firebase"; // Firestore reference
+import { collection, getDocs } from "firebase/firestore";
 
 interface DataContextType {
-  data: any;
+  data: any[];
   loading: boolean;
   error: string | null;
 }
 
 const DataContext = createContext<DataContextType>({
-  data: null,
+  data: [],
   loading: true,
   error: null,
 });
 
 export const DataProvider = ({ children }: { children: React.ReactNode }) => {
-  const [data, setData] = useState<any>(null);
+  const [data, setData] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const dbRef = ref(database, "/");
+    const fetchData = async () => {
+      try {
+        const querySnapshot = await getDocs(collection(db, "products"));
+        const productsData = querySnapshot.docs.map((doc) => ({
+          productId: doc.id,
+          ...doc.data(),
+        }));
+        setData(productsData);
 
-    onValue(
-      dbRef,
-      (snapshot) => {
-        setData(snapshot.val());
-        setLoading(false);
-      },
-      (err) => {
-        console.error("Firebase read failed: ", err);
+        // Triggering Algolia sync via API
+        // await fetch("/api/algolia_index_sync", {
+        //   method: "POST",
+        // });
+      } catch (err: any) {
+        console.error("Firestore fetch failed:", err);
         setError(err.message);
+      } finally {
         setLoading(false);
       }
-    );
+    };
+
+    fetchData();
   }, []);
 
   return (

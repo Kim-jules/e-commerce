@@ -1,0 +1,484 @@
+[
+  {
+    "product_name": "Men's Green Traditional Tunic Suit",
+    "description": "A stylish green tunic suit with intricate patterns, ideal for cultural or formal events.",
+    "brand": "CustomTailor",
+    "category": "Suits",
+    "sub_category": "Traditional Wear",
+    "colors": [
+      "#008000",
+      "#FFFFFF"
+    ],
+    "price": 199.99,
+    "discount": 15,
+    "style": "traditional",
+    "gender": "male",
+    "images": [
+      "https://firebasestorage.googleapis.com/v0/b/fir-auth-6de3c.firebasestorage.app/o/product_images%2F10.jpg?alt=media",
+      "https://firebasestorage.googleapis.com/v0/b/fir-auth-6de3c.firebasestorage.app/o/product_images%2F10.jpg?alt=media"
+    ],
+    "reviews": [
+      {
+        "userId": "user123",
+        "review": "Perfect for cultural events, great quality!",
+        "rating": 4,
+        "date": "2025-05-07T12:00:00Z"
+      }
+    ],
+    "ratings": 4.5,
+    "seasons": [
+      "spring",
+      "summer"
+    ],
+    "size": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "stock": {
+      "M": 4,
+      "L": 3,
+      "XL": 3
+    },
+    "tags": [
+      "traditional",
+      "cultural",
+      "formal"
+    ],
+    "similar_products": [
+      "prod101",
+      "prod102"
+    ],
+    "dateAdded": "2025-05-07T12:00:00Z",
+    "slug": "mens-green-traditional-tunic-suit"
+  },
+  {
+    "product_name": "Men's White Blazer with Black Pants",
+    "description": "A sleek white blazer paired with black pants, perfect for modern formal looks.",
+    "brand": "Zara",
+    "category": "Blazers",
+    "sub_category": "Formal Wear",
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "price": 149.99,
+    "discount": 10,
+    "style": "slim",
+    "gender": "male",
+    "images": [
+      "https://firebasestorage.googleapis.com/v0/b/fir-auth-6de3c.firebasestorage.app/o/product_images%2F1.jpg?alt=media",
+      "https://firebasestorage.googleapis.com/v0/b/fir-auth-6de3c.firebasestorage.app/o/product_images%2F1.jpg?alt=media"
+    ],
+    "reviews": [
+      {
+        "userId": "user124",
+        "review": "Looks sharp, fits well!",
+        "rating": 5,
+        "date": "2025-05-07T12:00:00Z"
+      }
+    ],
+    "ratings": 4.8,
+    "seasons": [
+      "spring",
+      "summer"
+    ],
+    "size": [
+      "S",
+      "M",
+      "L"
+    ],
+    "stock": {
+      "S": 3,
+      "M": 5,
+      "L": 4
+    },
+    "tags": [
+      "formal",
+      "modern",
+      "trendy"
+    ],
+    "similar_products": [
+      "prod103",
+      "prod104"
+    ],
+    "dateAdded": "2025-05-07T12:00:00Z",
+    "slug": "mens-white-blazer-with-black-pants"
+  },
+  {
+    "product_name": "Women's Grey Crop Hoodie with Shorts",
+    "description": "A cozy grey crop hoodie paired with distressed denim shorts and thigh-high boots.",
+    "brand": "UrbanOutfitters",
+    "category": "Casual Wear",
+    "sub_category": "Streetwear",
+    "colors": [
+      "#808080",
+      "#0000FF",
+      "#000000"
+    ],
+    "price": 89.99,
+    "discount": 5,
+    "style": "casual",
+    "gender": "female",
+    "images": [
+      "https://firebasestorage.googleapis.com/v0/b/fir-auth-6de3c.firebasestorage.app/o/product_images%2F2.jpg?alt=media",
+      "https://firebasestorage.googleapis.com/v0/b/fir-auth-6de3c.firebasestorage.app/o/product_images%2F2.jpg?alt=media"
+    ],
+    "reviews": [
+      {
+        "userId": "user125",
+        "review": "Super trendy and comfortable!",
+        "rating": 4,
+        "date": "2025-05-07T12:00:00Z"
+      }
+    ],
+    "ratings": 4.3,
+    "seasons": [
+      "fall",
+      "spring"
+    ],
+    "size": [
+      "XS",
+      "S",
+      "M"
+    ],
+    "stock": {
+      "XS": 6,
+      "S": 7,
+      "M": 7
+    },
+    "tags": [
+      "casual",
+      "streetwear",
+      "trendy"
+    ],
+    "similar_products": [
+      "prod105",
+      "prod106"
+    ],
+    "dateAdded": "2025-05-07T12:00:00Z",
+    "slug": "womens-grey-crop-hoodie-with-shorts"
+  },
+  {
+    "product_name": "Women's Cream Turtleneck Wide-Leg Pants Set",
+    "description": "A sophisticated cream turtleneck and wide-leg pants with a camel coat, ideal for chic winter looks.",
+    "brand": "Mango",
+    "category": "Pants Sets",
+    "sub_category": "Formal Wear",
+    "colors": [
+      "#FFFDD0",
+      "#C68E17"
+    ],
+    "price": 179.99,
+    "discount": 10,
+    "style": "elegant",
+    "gender": "female",
+    "images": [
+      "https://firebasestorage.googleapis.com/v0/b/fir-auth-6de3c.firebasestorage.app/o/product_images%2F3.jpg?alt=media",
+      "https://firebasestorage.googleapis.com/v0/b/fir-auth-6de3c.firebasestorage.app/o/product_images%2F3.jpg?alt=media"
+    ],
+    "reviews": [
+      {
+        "userId": "user126",
+        "review": "Very elegant and warm, love it!",
+        "rating": 5,
+        "date": "2025-05-07T12:00:00Z"
+      }
+    ],
+    "ratings": 4.9,
+    "seasons": [
+      "fall",
+      "winter"
+    ],
+    "size": [
+      "S",
+      "M",
+      "L"
+    ],
+    "stock": {
+      "S": 2,
+      "M": 3,
+      "L": 3
+    },
+    "tags": [
+      "elegant",
+      "formal",
+      "winter"
+    ],
+    "similar_products": [
+      "prod107",
+      "prod108"
+    ],
+    "dateAdded": "2025-05-07T12:00:00Z",
+    "slug": "womens-cream-turtleneck-wide-leg-pants-set"
+  },
+  {
+    "product_name": "Women's Light Blue Pleated Midi Skirt Set",
+    "description": "A light blue button-up shirt paired with a grey pleated midi skirt, perfect for smart-casual outings.",
+    "brand": "H&M",
+    "category": "Skirt Sets",
+    "sub_category": "Smart Casual",
+    "colors": [
+      "#ADD8E6",
+      "#808080"
+    ],
+    "price": 99.99,
+    "discount": 5,
+    "style": "smart casual",
+    "gender": "female",
+    "images": [
+      "https://firebasestorage.googleapis.com/v0/b/fir-auth-6de3c.firebasestorage.app/o/product_images%2F4.jpg?alt=media",
+      "https://firebasestorage.googleapis.com/v0/b/fir-auth-6de3c.firebasestorage.app/o/product_images%2F4.jpg?alt=media"
+    ],
+    "reviews": [
+      {
+        "userId": "user127",
+        "review": "Great for work or casual outings!",
+        "rating": 4,
+        "date": "2025-05-07T12:00:00Z"
+      }
+    ],
+    "ratings": 4.4,
+    "seasons": [
+      "spring",
+      "summer"
+    ],
+    "size": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "stock": {
+      "XS": 3,
+      "S": 4,
+      "M": 4,
+      "L": 4
+    },
+    "tags": [
+      "smart casual",
+      "workwear",
+      "trendy"
+    ],
+    "similar_products": [
+      "prod109",
+      "prod110"
+    ],
+    "dateAdded": "2025-05-07T12:00:00Z",
+    "slug": "womens-light-blue-pleated-midi-skirt-set"
+  },
+  {
+    "product_name": "Women's Blue Floral Slit Maxi Dress",
+    "description": "A flowy blue floral maxi dress with a front slit, perfect for summer outings.",
+    "brand": "Reiss",
+    "category": "Dresses",
+    "sub_category": "Maxi Dresses",
+    "colors": [
+      "#0000FF",
+      "#FFFFFF"
+    ],
+    "price": 129.99,
+    "discount": 10,
+    "style": "bohemian",
+    "gender": "female",
+    "images": [
+      "https://firebasestorage.googleapis.com/v0/b/fir-auth-6de3c.firebasestorage.app/o/product_images%2F5.jpg?alt=media",
+      "https://firebasestorage.googleapis.com/v0/b/fir-auth-6de3c.firebasestorage.app/o/product_images%2F5.jpg?alt=media"
+    ],
+    "reviews": [
+      {
+        "userId": "user128",
+        "review": "Beautiful dress, very comfortable!",
+        "rating": 5,
+        "date": "2025-05-07T12:00:00Z"
+      }
+    ],
+    "ratings": 4.7,
+    "seasons": [
+      "spring",
+      "summer"
+    ],
+    "size": [
+      "S",
+      "M",
+      "L"
+    ],
+    "stock": {
+      "S": 4,
+      "M": 4,
+      "L": 4
+    },
+    "tags": [
+      "bohemian",
+      "floral",
+      "summer"
+    ],
+    "similar_products": [
+      "prod111",
+      "prod112"
+    ],
+    "dateAdded": "2025-05-07T12:00:00Z",
+    "slug": "womens-blue-floral-slit-maxi-dress"
+  },
+  {
+    "product_name": "Men's Maroon Sweater with Grey Pants",
+    "description": "A maroon sweater with a white shirt and grey pants, ideal for a smart-casual look.",
+    "brand": "Uniqlo",
+    "category": "Sweaters",
+    "sub_category": "Smart Casual",
+    "colors": [
+      "#800000",
+      "#808080",
+      "#FFFFFF"
+    ],
+    "price": 79.99,
+    "discount": 5,
+    "style": "smart casual",
+    "gender": "male",
+    "images": [
+      "https://firebasestorage.googleapis.com/v0/b/fir-auth-6de3c.firebasestorage.app/o/product_images%2F6.jpg?alt=media",
+      "https://firebasestorage.googleapis.com/v0/b/fir-auth-6de3c.firebasestorage.app/o/product_images%2F6.jpg?alt=media"
+    ],
+    "reviews": [
+      {
+        "userId": "user129",
+        "review": "Comfortable and stylish!",
+        "rating": 4,
+        "date": "2025-05-07T12:00:00Z"
+      }
+    ],
+    "ratings": 4.2,
+    "seasons": [
+      "fall",
+      "winter"
+    ],
+    "size": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "stock": {
+      "M": 6,
+      "L": 6,
+      "XL": 6
+    },
+    "tags": [
+      "smart casual",
+      "cozy",
+      "fall"
+    ],
+    "similar_products": [
+      "prod113",
+      "prod114"
+    ],
+    "dateAdded": "2025-05-07T12:00:00Z",
+    "slug": "mens-maroon-sweater-with-grey-pants"
+  },
+  {
+    "product_name": "Women's Beige Knit Dress with Cardigan",
+    "description": "A beige knit dress with a matching long cardigan, perfect for a cozy yet chic look.",
+    "brand": "Zara",
+    "category": "Dresses",
+    "sub_category": "Knitwear",
+    "colors": [
+      "#F5F5DC"
+    ],
+    "price": 159.99,
+    "discount": 10,
+    "style": "cozy chic",
+    "gender": "female",
+    "images": [
+      "https://firebasestorage.googleapis.com/v0/b/fir-auth-6de3c.firebasestorage.app/o/product_images%2F7.jpg?alt=media",
+      "https://firebasestorage.googleapis.com/v0/b/fir-auth-6de3c.firebasestorage.app/o/product_images%2F7.jpg?alt=media"
+    ],
+    "reviews": [
+      {
+        "userId": "user130",
+        "review": "Love the texture and fit, very elegant!",
+        "rating": 5,
+        "date": "2025-05-07T12:00:00Z"
+      }
+    ],
+    "ratings": 4.8,
+    "seasons": [
+      "fall",
+      "winter"
+    ],
+    "size": [
+      "S",
+      "M",
+      "L"
+    ],
+    "stock": {
+      "S": 3,
+      "M": 4,
+      "L": 3
+    },
+    "tags": [
+      "cozy",
+      "elegant",
+      "winter"
+    ],
+    "similar_products": [
+      "prod115",
+      "prod116"
+    ],
+    "dateAdded": "2025-05-07T12:00:00Z",
+    "slug": "womens-beige-knit-dress-with-cardigan"
+  },
+  {
+    "product_name": "Unisex Grey Overcoat with Navy Pants",
+    "description": "A matching grey overcoat and navy pants set, paired with casual sneakers for a modern look.",
+    "brand": "ASOS",
+    "category": "Coats",
+    "sub_category": "Casual Wear",
+    "colors": [
+      "#808080",
+      "#000080"
+    ],
+    "price": 139.99,
+    "discount": 10,
+    "style": "modern casual",
+    "gender": "unisex",
+    "images": [
+      "https://firebasestorage.googleapis.com/v0/b/fir-auth-6de3c.firebasestorage.app/o/product_images%2F8.jpg?alt=media",
+      "https://firebasestorage.googleapis.com/v0/b/fir-auth-6de3c.firebasestorage.app/o/product_images%2F8.jpg?alt=media"
+    ],
+    "reviews": [
+      {
+        "userId": "user131",
+        "review": "Versatile and stylish, great for everyday wear!",
+        "rating": 4,
+        "date": "2025-05-07T12:00:00Z"
+      }
+    ],
+    "ratings": 4.5,
+    "seasons": [
+      "fall",
+      "winter"
+    ],
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "stock": {
+      "S": 3,
+      "M": 4,
+      "L": 4,
+      "XL": 3
+    },
+    "tags": [
+      "casual",
+      "modern",
+      "winter"
+    ],
+    "similar_products": [
+      "prod117",
+      "prod118"
+    ],
+    "dateAdded": "2025-05-07T12:00:00Z",
+    "slug": "unisex-grey-overcoat-with-navy-pants"
+  }
+]

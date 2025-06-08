@@ -5,6 +5,7 @@ import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import CartProvider from "@/context/useCart";
 import { DataProvider } from "@/context/DataContext";
+// import ChatWidget from "@/components/AIiChatWidget";
 
 const quickSand = Quicksand({
   subsets: ["latin"],
@@ -34,7 +35,10 @@ export default function RootLayout({
         <DataProvider>
           <CartProvider>
             <NavBar />
-            <main className="content flex-grow min-h-screen">{children}</main>
+            <main className="content flex-grow min-h-screen">
+              {children}
+              {/* <ChatWidget /> */}
+            </main>
             <Footer />
           </CartProvider>
         </DataProvider>
